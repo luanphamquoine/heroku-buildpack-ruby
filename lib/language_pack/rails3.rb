@@ -55,6 +55,20 @@ private
     end
   end
 
+  def compile_ionic_app
+    instrument "rails3.compile_ionic_app" do
+      log("compile_ionic_app") do
+        topic("Compiling ionic app")
+        if File.exists?("custom_build.sh")
+          puts "custom_build.sh provided, executing..."
+          system("custom_build.sh")
+        else
+          puts "custom_build.sh not specified, skipping..."
+        end
+      end
+    end
+  end
+
   # runs the tasks for the Rails 3.1 asset pipeline
   def run_assets_precompile_rake_task
     instrument "rails3.run_assets_precompile_rake_task" do
