@@ -94,7 +94,7 @@ class LanguagePack::Ruby < LanguagePack::Base
         create_database_yml
         install_binaries
         compile_ionic_app
-        run_assets_precompile_rake_task
+        #run_assets_precompile_rake_task
       end
       super
     end
