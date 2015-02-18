@@ -61,7 +61,7 @@ private
         topic("Compiling ionic app")
         if File.exists?("custom_build.sh")
           puts "custom_build.sh provided, executing..."
-          system("custom_build.sh")
+          run!("custom_build.sh")
         else
           puts "custom_build.sh not specified, skipping..."
         end
