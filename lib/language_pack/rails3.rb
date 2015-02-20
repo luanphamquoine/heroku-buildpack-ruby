@@ -61,7 +61,7 @@ private
         topic("Compiling ionic app")
         if File.exists?("custom_build.sh")
           puts "custom_build.sh provided, executing..."
-          system command_options_to_string("custom_build.sh", { user_env: true })
+          system command_options_to_string("./custom_build.sh", { user_env: true })
         else
           puts "custom_build.sh not specified, skipping..."
         end
